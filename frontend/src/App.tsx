@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const fetchImages = async () => {
-    setImages(Array(10).fill('/public/img/box.png'));
+    setImages(Array(10).fill('../public/img/box.png'));
     setLoading(true);
     document.querySelectorAll(".rare").forEach((elm) => elm.classList.remove("rare"));
     document.querySelectorAll(".cute").forEach((elm) => elm.classList.remove("cute"));
@@ -20,8 +20,7 @@ function App() {
 
         // バックエンドAPIにリクエストを送信
         const response = await fetch(
-          'https://yoshinon-gacha-proxy.twil3akine.workers.dev//api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // 本番環境
-          // 'http://localhost:8787/api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // テスト環境
+          'https://yoshinon-gacha-proxy.twil3akine.workers.dev/api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // 本番環境
         );
         const html = await response.text(); // HTMLを文字列として取得
 
@@ -59,7 +58,7 @@ function App() {
               disabled={loading} 
               className='button'
       >
-        {!loading ? <img src='/public/img/borg.svg' alt='not loading' className='icon' /> : <img src='/public/img/refresh.svg' alt='loading' className='loading icon' />}
+        {!loading ? <img src='../public/img/borg.svg' alt='not loading' className='icon' /> : <img src='../public/img/refresh.svg' alt='loading' className='loading icon' />}
         {loading ? 'Loading...' : 'Push!'}
       </button>
       <div className='imageContainer'
