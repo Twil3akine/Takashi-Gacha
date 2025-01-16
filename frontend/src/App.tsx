@@ -20,7 +20,7 @@ function App() {
 
         // バックエンドAPIにリクエストを送信
         const response = await fetch(
-          'https://229aaa07-yoshinon-gacha-proxy.twil3akine.workers.dev//api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // 本番環境
+          'https://yoshinon-gacha-proxy.twil3akine.workers.dev//api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // 本番環境
           // 'http://localhost:8787/api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // テスト環境
         );
         const html = await response.text(); // HTMLを文字列として取得
