@@ -39,6 +39,7 @@ function App() {
             if (cuteImages.includes(absoluteUrl)) {
               selectedImages[i].classList.add('cute');
             }
+            selectedImages[i].style.cursor = "pointer";
             return newImages;
           }); // 画像をリストに追加
         }

@@ -2,7 +2,7 @@
   "name": "backend",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --minify",
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --host 0.0.0.0",
     "deploy": "wrangler deploy --minify"
   },
   "dependencies": {

@@ -3,15 +3,26 @@ services:
   build:
    context: ./frontend
    dockerfile: Dockerfile
+  container_name: Web
   ports:
   - "5173:5173"
   volumes:
   - ./frontend:/app/frontend
+  networks:
+  - network
+
  api:
   build:
    context: ./backend
    dockerfile: Dockerfile
+  container_name: Api
   ports:
   - "8787:8787"
   volumes:
   - ./backend:/app/backend
+  networks:
+  - network
+
+networks:
+ network:
+  external: false
