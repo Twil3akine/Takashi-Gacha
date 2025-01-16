@@ -59,7 +59,7 @@ function App() {
               disabled={loading} 
               className='button'
       >
-        {!loading ? <img src='/public/img/done.svg' alt='not loading' className='icon' /> : <img src='/public/img/refresh.svg' alt='loading' className='loading icon' />}
+        {!loading ? <img src='/public/img/borg.svg' alt='not loading' className='icon' /> : <img src='/public/img/refresh.svg' alt='loading' className='loading icon' />}
         {loading ? 'Loading...' : 'Push!'}
       </button>
       <div className='imageContainer'
