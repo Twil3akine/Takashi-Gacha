@@ -20,7 +20,8 @@ function App() {
 
         // バックエンドAPIにリクエストを送信
         const response = await fetch(
-          'http://localhost:8787/api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/'
+          'https://44618fc0-backend.twil3akine.workers.dev/api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // 本番環境
+          // 'http://localhost:8787/api/proxy?url=https://web.wakayama-u.ac.jp/~yoshino/' // テスト環境
         );
         const html = await response.text(); // HTMLを文字列として取得
 
@@ -34,12 +35,12 @@ function App() {
             const newImages = [...prevImages];
             newImages[i] = absoluteUrl;
             if (rareImages.includes(absoluteUrl)) {
-              selectedImages[i].classList.add('rare');
+              selectedImages[i+1].classList.add('rare');
             }
             if (cuteImages.includes(absoluteUrl)) {
-              selectedImages[i].classList.add('cute');
+              selectedImages[i+1].classList.add('cute');
             }
-            selectedImages[i].style.cursor = "pointer";
+            selectedImages[i+1].style.cursor = "pointer";
             return newImages;
           }); // 画像をリストに追加
         }
@@ -58,6 +59,7 @@ function App() {
               disabled={loading} 
               className='button'
       >
+        {!loading ? <img src='/public/img/done.svg' alt='not loading' className='icon' /> : <img src='/public/img/refresh.svg' alt='loading' className='loading icon' />}
         {loading ? 'Loading...' : 'Push!'}
       </button>
       <div className='imageContainer'
