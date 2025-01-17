@@ -5,7 +5,10 @@ import { cors } from 'hono/cors';
 const app = new Hono();
 
 // CORSを有効化
-app.use('*', cors());
+app.use('*', cors({
+  origin: 'https://yoshinon-gacha.pages.dev',
+  credentials: true
+}));
 
 // プロキシエンドポイント
 app.get('/api/proxy', async (c) => {
