@@ -1,0 +1,140 @@
+*   commit dba75b228d36a2ce58fd778f186ecf5345d0401c
+|\  Merge: 2b1fc91 0c574ad
+| | Author: Twil3akine <twil3akine@gmail.com>
+| | Date:   Sat Jan 18 22:50:14 2025 +0900
+| | 
+| |     Merge branch 'master' of github.com:twil3akine/takashi-gacha into develop
+| |   
+| *   commit 0c574ad2aa227d2f7a74d61a6e54ef2730c2aa2b
+| |\  Merge: 9614eb2 39540dd
+| | | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | | Date:   Fri Jan 17 20:17:40 2025 +0900
+| | | 
+| | |     Merge pull request #5 from Twil3akine/develop
+| | |     
+| | |     Develop
+| | |   
+| * |   commit 9614eb2ff585456f8d8ee28a3b34555868ad859b
+| |\ \  Merge: b54ae8f a4fd157
+| | | | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | | | Date:   Fri Jan 17 01:50:02 2025 +0900
+| | | | 
+| | | |     Merge pull request #4 from Twil3akine/develop
+| | | |     
+| | | |     may fixed bugs
+| | | | 
+* | | | commit 2b1fc91ca3fa755649df45ececc1f211c89074c2
+| |_|/  Author: Twil3akine <twil3akine@gmail.com>
+|/| |   Date:   Sat Jan 18 22:48:09 2025 +0900
+| | |   
+| | |       - modify button layout in a little
+| | |       - add log setting in wrangler.toml
+| | |   
+* | |   commit 39540dde7c3375dde90d901f56627857ee1cedcd
+|\ \ \  Merge: 4359504 a4fd157
+| | |/  Author: Twil3akine <twil3akine@gmail.com>
+| |/|   Date:   Fri Jan 17 20:16:48 2025 +0900
+| | |   
+| | |       Merge branch 'develop' of github.com:twil3akine/takashi-gacha into develop
+| | | 
+| * | commit a4fd157c8ff105f8791f1f0bdb9986ba4f64de40
+| |\| Merge: fa5aa22 b54ae8f
+| | | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | | Date:   Fri Jan 17 01:49:33 2025 +0900
+| | | 
+| | |     Merge branch 'master' into develop
+| | | 
+| | * commit b54ae8f9da4c2dce2568e6175476f81d9e0003e3
+| | | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | | Date:   Fri Jan 17 01:31:43 2025 +0900
+| | | 
+| | |     Update App.tsx
+| | | 
+* | | commit 4359504125b885d9ccb8d3bb6b0c3550bddc6099
+|/ /  Author: Twil3akine <twil3akine@gmail.com>
+| |   Date:   Fri Jan 17 20:13:26 2025 +0900
+| |   
+| |       - fix correctly images paths
+| |       - maybe add cookie settings
+| | 
+* | commit fa5aa2239b4b3c95c97807007881c5f3068529f4
+|/  Author: Twil3akine <twil3akine@gmail.com>
+|   Date:   Fri Jan 17 01:48:14 2025 +0900
+|   
+|       may fixed bugs
+|   
+*   commit c5d3c5482d76936e1983e6f4ce0fdee53567f81c
+|\  Merge: e297fd6 a32fbdc
+| | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | Date:   Fri Jan 17 01:29:10 2025 +0900
+| | 
+| |     Merge pull request #3 from Twil3akine/develop
+| |     
+| |     change wrangler.toml
+| | 
+| * commit a32fbdc6930dfa5683cf9d85cf7c8b88b37d1493
+|/  Author: Twil3akine <twil3akine@gmail.com>
+|   Date:   Fri Jan 17 01:28:14 2025 +0900
+|   
+|       change wrangler.toml
+|   
+*   commit e297fd692b8e05ac26e3ac4bb0ad7f3211026872
+|\  Merge: dc74997 6804c33
+| | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | Date:   Fri Jan 17 01:26:14 2025 +0900
+| | 
+| |     Merge pull request #2 from Twil3akine/develop
+| |     
+| |     Develop
+| |   
+| *   commit 6804c333655148467d6dcf4d627d708ac4adb3dc
+| |\  Merge: 84a16d1 dc74997
+| |/  Author: Twil3akine <twil3akine@gmail.com>
+|/|   Date:   Fri Jan 17 01:23:35 2025 +0900
+| |   
+| |       Merge branch 'master' of github.com:twil3akine/takashi-gacha into develop
+| |   
+* |   commit dc74997ea61eaf2742fa6fa539d9a52caf705fa8
+|\ \  Merge: c964bb4 467dd5f
+| | | Author: Twil3akine <156310846+Twil3akine@users.noreply.github.com>
+| | | Date:   Fri Jan 17 01:19:12 2025 +0900
+| | | 
+| | |     Merge pull request #1 from Twil3akine/develop
+| | |     
+| | |     Develop
+| | | 
+| | * commit 84a16d1c64ba6a6a192f209c3c859672f1412042
+| |/  Author: Twil3akine <twil3akine@gmail.com>
+| |   Date:   Fri Jan 17 01:21:48 2025 +0900
+| |   
+| |       change main proxy path
+| | 
+| * commit 467dd5f9f4531a56ccbda80ad295ca32ae041608
+| | Author: Twil3akine <twil3akine@gmail.com>
+| | Date:   Fri Jan 17 01:17:30 2025 +0900
+| | 
+| |     rotate icon
+| | 
+| * commit 5e36bd71c3f932662450b92e66e8678d1ba46ea8
+| | Author: Twil3akine <twil3akine@gmail.com>
+| | Date:   Fri Jan 17 01:02:15 2025 +0900
+| | 
+| |     add icon
+| | 
+| * commit 0c95d05e11e40f4717858aa14add532376058455
+| | Author: Twil3akine <twil3akine@gmail.com>
+| | Date:   Thu Jan 16 23:07:25 2025 +0900
+| | 
+| |     make ignite from docker-container
+| | 
+| * commit 1dead5a3423b478916014363c7c1214d53618696
+|/  Author: Twil3akine <twil3akine@gmail.com>
+|   Date:   Wed Jan 15 09:24:02 2025 +0900
+|   
+|       add rare class && set image container
+| 
+* commit c964bb42669350b314d8ab9ba10cd1105266ade5
+  Author: Twil3akine <twil3akine@gmail.com>
+  Date:   Thu Dec 26 07:57:16 2024 +0900
+  
+      first commit

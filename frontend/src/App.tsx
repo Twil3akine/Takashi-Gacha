@@ -8,12 +8,15 @@ import refresh from '../public/img/refresh.svg';
 function App() {
   const [images, setImages] = useState<string[]>(Array(10).fill(box));
   const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const fetchImages = async () => {
     setImages(Array(10).fill(box));
     setLoading(true);
+
     document.querySelectorAll(".rare").forEach((elm) => elm.classList.remove("rare"));
     document.querySelectorAll(".cute").forEach((elm) => elm.classList.remove("cute"));
+
     const parser: DOMParser = new DOMParser();
     const selectedImages: NodeListOf<HTMLImageElement> = document.querySelectorAll("img");
 
@@ -39,13 +42,18 @@ function App() {
           setImages((prevImages) => {
             const newImages = [...prevImages];
             newImages[i] = absoluteUrl;
+
+            const imgElm = selectedImages[i+1];
+
             if (rareImages.includes(absoluteUrl)) {
-              selectedImages[i+1].classList.add('rare');
+              imgElm.classList.add('rare');
+            } else if (cuteImages.includes(absoluteUrl)) {
+              imgElm.classList.add('cute');
             }
-            if (cuteImages.includes(absoluteUrl)) {
-              selectedImages[i+1].classList.add('cute');
-            }
-            selectedImages[i+1].style.cursor = "pointer";
+
+            imgElm.style.cursor = "pointer";
+            
+
             return newImages;
           }); // 画像をリストに追加
         }
@@ -58,29 +66,32 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1 className='title'>Yoshinon Gacha</h1>
-      <button onClick={fetchImages} 
-              disabled={loading} 
-              className='button'
-      >
-        {!loading ? <img src={borg} alt='not loading' className='icon' /> : <img src={refresh} alt='loading' className='loading icon' />}
-        {loading ? 'Loading...' : 'Push!'}
-      </button>
-      <div className='imageContainer'
-      >
-        {images.map((src, index) => (
-          <div className='imageBase' key={index}>
-            <img
-              key={index}
-              src={src}
-              alt={`Image ${index}`}
-              className='image'
-            />
-          </div>
-        ))}
+    <>
+      <div className="container">
+        <h1 className='title'>Yoshinon Gacha</h1>
+        <button onClick={fetchImages} 
+                disabled={loading} 
+                className='button'
+        >
+          {!loading ? <img src={borg} alt='not loading' className='icon' /> : <img src={refresh} alt='loading' className='loading icon' />}
+          {loading ? 'Loading...' : 'Push!'}
+        </button>
+        <div className='imageContainer'
+        >
+          {images.map((src, index) => (
+            <div className='imageBase' key={index}>
+              <img
+                key={index}
+                src={src}
+                alt={`Image ${index}`}
+                className='image'
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+      <div className="shadow" style={expanded ? {display: 'block'} : {display: 'none'}}></div>
+    </>
   );
 }
 
